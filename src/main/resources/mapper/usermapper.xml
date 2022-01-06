@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lxl.mapper.usermapper">
+    <select id="getuserByname" resultType="user" parameterType="string">
+        select * from userinfo where username=#{name}
+    </select>
+    <select id="getalluser" resultType="user">
+        select * from userinfo
+    </select>
+    <insert id="adduser" parameterType="user" useGeneratedKeys="true" keyProperty="id">
+        insert into userinfo values(#{id},#{username},#{email},#{password})
+    </insert>
+</mapper>

@@ -1,0 +1,14 @@
+package com.lxl.ov;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class loginform {
+    private String username;
+    private String password;
+    private String identifyingCode;
+}
